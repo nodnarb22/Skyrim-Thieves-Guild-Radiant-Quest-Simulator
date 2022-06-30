@@ -11,7 +11,7 @@ def quest():
  bin5 = 0
  quests_done = 0
  while bin1 < 5 or bin2 < 5 or bin3 < 5 or bin4 < 5: #keeps tossing while a bin has less than 5 balls
-  qlocation = random.randrange(1,5) #tosses randomly
+  qlocation = random.randrange(1,6) #tosses randomly
   if qlocation == 1:
         bin1 += 1
   if qlocation == 2:
