@@ -1,14 +1,17 @@
+# I have 5 bins and throw balls at then randomly with equal probability. What is the expected number of tosses I need 
+#so that each bin has at least 5 balls?
 import random
 
+#simulates a trial
 def quest():
- bin1 = 0
+ bin1 = 0 #defines bins
  bin2 = 0
  bin3 = 0
  bin4 = 0
  bin5 = 0
  quests_done = 0
- while bin1 < 5 or bin2 < 5 or bin3 < 5 or bin4 < 5:
-  qlocation = random.randrange(1,5)
+ while bin1 < 5 or bin2 < 5 or bin3 < 5 or bin4 < 5: #keeps tossing while a bin has less than 5 balls
+  qlocation = random.randrange(1,5) #tosses randomly
   if qlocation == 1:
         bin1 += 1
   if qlocation == 2:
@@ -19,10 +22,10 @@ def quest():
         bin4 += 1
   if qlocation == 5:
         bin5 += 1
-  quests_done += 1
+  quests_done += 1 #after each loop, we add one to our total number of tosses
  return(quests_done)
 
-def dragonborn(n):
+def dragonborn(n): #runs the quest simulation a specified number of times and returns the average number of tosses
     saves = n
     questlog = 0
     while saves > 0:
